@@ -1,0 +1,9 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+*.iml
+target/
+.idea
+build/
+manifest-merger-release-report
