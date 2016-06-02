@@ -8,6 +8,9 @@ import Views.Behavior.LandingBehavior;
 
 /**
  * Created by FcoPardo on 6/1/16.
+ * Ejemplo de composición mixta. Podemos tanto crear una instancia de una interfaz (new interfaz)
+ * como una implementación de una interfaz (implements interfaz)... usaremos el segundo caso cuando
+ * necesitemos tener información de la clase para tomar decisiones.
  */
 public class ChromeBookBehavior implements GiganticLandingBehavior {
 
@@ -52,10 +55,6 @@ public class ChromeBookBehavior implements GiganticLandingBehavior {
 
     public void setCommonBehavior(LandingBehavior aCommonBehavior){
         commonBehavior = aCommonBehavior;
-    }
-
-    public ChromeBookBehavior(){
-
     }
 
     public ChromeBookBehavior(LandingBehavior aCommonBehavior, Context context){
