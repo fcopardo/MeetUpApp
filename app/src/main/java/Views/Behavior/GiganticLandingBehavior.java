@@ -10,5 +10,4 @@ public interface GiganticLandingBehavior extends LandingBehavior{
     void useCaseFive();
     void useCaseSix();
 
-
 }

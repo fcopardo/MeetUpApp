@@ -1,3 +1,6 @@
+/*El plugin de retrolambda permite usar algunos features de java 8. Se debería reemplazar por Jack,
+pero esto corre en cualquier versión de Android Studio, y es estable mientras tanto.
+*/
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 
@@ -54,7 +57,8 @@ dependencies {
         transitive = true
     }
 
-    compile 'com.github.fcopardo.StrokedTextView-Android:StrokedTextView:v1.0.0@aar'
+    //Pack de funciones generales. Utilizada para evaluar la cantidad de ram del dispositivo.
     compile 'com.github.fcopardo.AndroidFunctions:AndroidFunctions:v1.0.5'
+    //Utilizada para crear los views. Permite reutilizar la lógica para inflar un archivo layout arbitrario.
     compile 'com.github.fcopardo.BaseViews-Android:BaseViews:v1.0.2@aar'
 }
