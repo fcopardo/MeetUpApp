@@ -26,7 +26,7 @@ public class PhoneViewFactory {
         if(DeviceFunctions.isMemoryLow(context, 70000, 100000)) {
             view = new ShitPhoneLandingView(context);
         }else{
-            /*TODO: HAGAMOS MAS SUPOSICIONES...
+            /*TODO: HAGAMOS MAS SUPOSICIONES... Por ejemplo, digamos que cualquier nexus es un chromebook...
             * */
 
             if(Build.MODEL.contains("Nexus")){

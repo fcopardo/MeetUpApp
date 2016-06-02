@@ -62,24 +62,66 @@ public class ChromebookLandingView extends BaseLandingView {
     public void setBehavior(LandingBehavior aBehavior){
         super.setBehavior(aBehavior);
 
-        buttonOne.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                behavior.useCaseOne();
-            }
-        });
-        buttonTwo.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                behavior.useCaseTwo();
-            }
-        });
-        buttonThree.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                behavior.useCaseThree();
-            }
-        });
+        if(aBehavior.getClass().equals(GiganticLandingBehavior.class)){
+
+            buttonOne.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((GiganticLandingBehavior)behavior).useCaseOne();
+                }
+            });
+            buttonTwo.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((GiganticLandingBehavior)behavior).useCaseTwo();
+                }
+            });
+            buttonThree.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((GiganticLandingBehavior)behavior).useCaseThree();
+                }
+            });
+            buttonFour.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((GiganticLandingBehavior)behavior).useCaseFour();
+                }
+            });
+            buttonFive.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((GiganticLandingBehavior)behavior).useCaseFive();
+                }
+            });
+            buttonSix.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((GiganticLandingBehavior)behavior).useCaseSix();
+
+                }
+            });
+        }
+        else{
+            buttonOne.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    behavior.useCaseOne();
+                }
+            });
+            buttonTwo.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    behavior.useCaseTwo();
+                }
+            });
+            buttonThree.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    behavior.useCaseThree();
+                }
+            });
+        }
     }
 
     public void setSpecificBehavior(ChromeBookBehavior aSpecificBehavior){
@@ -98,8 +140,8 @@ public class ChromebookLandingView extends BaseLandingView {
             }
         });
         buttonThree.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                 specificBehavior.useCaseThree();
             }
         });

@@ -96,34 +96,7 @@ public class LandingBehaviorFactory {
 
         LandingBehavior behavior;
 
-        behavior = new LandingBehavior() {
-
-            private Context myContext;
-
-            @Override
-            public void useCaseOne() {
-                Toast.makeText(myContext, "Case Use One", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void useCaseTwo() {
-                Toast.makeText(myContext, "Case Use Two", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void useCaseThree() {
-                Toast.makeText(myContext, "Case Use Three", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void setContext(Context context) {
-                myContext = context;
-
-            }
-        };
-
-        behavior.setContext(context);
-
+        behavior = getBehavior(myClass, context);
 
         if(myClass.equals(ChromebookLandingView.class)){
             ChromeBookBehavior chromeBookBehavior = new ChromeBookBehavior(behavior, context);
